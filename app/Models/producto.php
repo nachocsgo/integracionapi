@@ -12,9 +12,14 @@ class producto extends Model
     'id',
     'codigo',
     'nombre_producto',
+    'tipo',
+    'img',
+    'descripcion',
     'marca',
     'modelo',
     'color',
-    'precio'
+    'precio',
+    'publicado',
+    'descuento'
     ];
 }

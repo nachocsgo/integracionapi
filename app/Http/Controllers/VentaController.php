@@ -16,7 +16,7 @@ class VentaController extends Controller
 
         $venta = venta::find($id);
         if(is_null($venta)){
-            return response()->json(['Mensaje' => 'Venta no encontrada 🤔'],404);
+            return response()->json(['Mensaje' => 'Venta no encontrada '],404);
         }
         return response()->json($venta,200);
     }
@@ -29,7 +29,7 @@ class VentaController extends Controller
     public function updateVenta(Request $request, $id){
         $venta = venta::find($id);
         if(is_null($venta)){
-            return response()->json(['Mensaje' => 'Venta no encontrada 😒'],404);
+            return response()->json(['Mensaje' => 'Venta no encontrada '],404);
         }
         $venta->update($request->all());
         return response($venta, 200);
@@ -38,10 +38,10 @@ class VentaController extends Controller
     public function deleteVenta($id){
         $venta = venta::find($id);  
         if(is_null($venta)){
-            return response()->json(['Mensaje' => 'Venta no encontrada 😑'],404);
+            return response()->json(['Mensaje' => 'Venta no encontrada '],404);
         }
         $venta->delete();
-        return response()->json(['Mensaje' => 'Venta Eliminada con éxito 😀']);
+        return response()->json(['Mensaje' => 'Venta Eliminada con éxito ']);
     }
 
 }
